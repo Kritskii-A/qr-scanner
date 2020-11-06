@@ -116,6 +116,8 @@
         sendRequest("POST", requestURL, body)
           .then((data) => console.log(data))
           .catch((err) => console.log(err));
+
+        scanner.stop(); // останавливаем сканер, если успешно получили qr-code
       }
       // вывод значения qr-code
       function setResult(label, result) {
